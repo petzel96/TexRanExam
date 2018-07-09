@@ -1,0 +1,1216 @@
+\documentclass[10pt]{examdesign}
+
+% loads all necessary packages (feel free to customize for your needs)
+
+%\usepackage[shortlabels]{enumerate}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage{pifont}
+\usepackage[english]{babel}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{totpages}
+\usepackage{booktabs}
+\usepackage[margin=0.9in]{geometry}
+\renewcommand{\headrulewidth}{0.0pt}
+\usepackage{framed}
+
+\SectionFont{\large\sffamily}
+\Fullpages
+\ContinuousNumbering
+\DefineAnswerWrapper{}{}
+\NumberOfVersions{1}
+
+%\ShortKey		% shows a short key answer sheet
+%\NoKey			% Print key ? Loesungsblatt ja oder nein
+
+\NoRearrange 	% Random arrange with latex? (leave it UNCOMMENTED, R will do all of the dirty work)
+
+\newcommand{\myversion}{} % this line is very important as it locates and allows the printed test to show the number of  the test (DONT DELETE IT)
+
+% You probably want to change the next lines
+
+\newcommand{\UniName}{Heinrich Heine University}
+\newcommand{\DeptName}{Biology}
+\newcommand{\ClassName}{250 Genetics}
+\newcommand{\MyName}{Tim Petzel}
+\newcommand{\ExamName}{Training 1 \myversion}
+\newcommand{\TermName}{Summer 2018}
+
+\rfoot{Test \# \myversion}
+
+\makeatletter
+\renewcommand{\exam@DefaultChoice}[2][]{%
+   \ifchoice \relax
+     \else \@mcstartlist \choicetrue
+   \fi
+   \ifanswer
+     \if#1!%
+       \ifbox \vspace{-\fboxsep}\item[\hfill\fbox{\Alph{choice}}\hfill] #2
+         \vspace{-\fboxsep}%
+       \else
+          \item[\hfill\MCfont{\Alph{choice}}\hfill] \MCfont{#2}%
+       \fi
+     \else \item[\hfill\Alph{choice}\hfill] #2
+     \fi
+     \stepcounter{choice}%
+   \else
+     \item[\hfill\Alph{choice}\hfill] #2
+     \stepcounter{choice}%
+   \fi}
+\makeatother
+
+\begin{document}
+
+\begin{examtop}
+
+% detais of the exam (you should probably edit this!)
+\begin{center}
+    \textbf{\Large \UniName} \\
+    \textbf{\Large \DeptName} \vspace{0.5cm}  \\
+    \textbf{\Large \ClassName} \\
+    \textbf{\Large \MyName} \\
+    \textbf{\Large \ExamName } \\
+    \textbf{\Large \TermName}
+ \end{center}
+
+\vspace{1cm}
+Name: \rule{4in}{.4pt}  \quad  \noindent Card:\enspace\hrulefill
+
+%\rule[1ex]{\textwidth}{2pt}
+
+\vspace{1cm}
+
+\small
+\fbox{\fbox{\parbox{5.5in}{\centering
+This Exam was created by Tim Petzel for learning purposes}}}
+
+\vspace{1cm}
+
+\fbox{\fbox{\parbox{5.5in}{\centering
+
+Instructions for this test:
+
+\begin{itemize}
+
+	\item Make sure you finish before the end of the exam time
+
+	\item There is only one correct answer in all multiple choice questions
+
+	\item Don't cheat!
+
+\end{itemize}
+
+\vspace{0.5cm}
+
+{\large \emph{Good Luck!}}
+}}}
+
+
+\end{examtop}
+
+
+\vspace{1cm}
+
+\begin{multiplechoice}[resetcounter=no,  examcolumns=1]
+
+
+\begin{question}
+
+	Welche Aussagen \"uber Mutationen bei Drosophila sind falsch?
+
+	\begin{enumerate}[(a)]
+		\item Zu den chromosomalen Aberrationen z\"ahlen Inversionen, Deletionen und Translokationen
+
+		\item Inversionen lassen sich bevorzugt durch Behandlung mit Ethylmethansulfonat (EMS) erzeugen?
+
+		\item Bei einer Translokation wurde ein Teils eines Chromosoms auf ein anderes Chromosom \"ubertragen
+
+    \item R\"ontgenbestrahlung erzeugt in erste Linie Punktmutationen
+
+    \item Das Entstehen einer Inversion f\"uhrt immer auch zu Mutationen auf dem betroffenen Chromosom
+	\end{enumerate}
+
+
+
+	\choice{a, d und e sind falsch}
+
+	\choice[!]{d, b und e sind falsch}
+
+	\choice{b, c und d sind falsch}
+
+	\choice{a, c und d sind falsch}
+
+	\choice{a, b und c sind falsch}
+
+\end{question}
+
+
+\begin{question}
+
+	Welche Aussagen \"uber Balancer-Chromosomen bei Drosophila sind richtig?
+\begin{enumerate}[(a)]
+  \item Balancer-Chromosomen tragen mehrere Deletionen
+	\item Bei Drosophila gibt es f\"ur alle Chromosomen Balancer-Chromosomen
+	\item Rezessive Letalmutationen auf den Balancer-Chromosomen helfen bei der Identifizierung der Balancertragenden Fliegen
+	\item Die Abk\"urzung FM... steht f\"ur Balancer-Chromosomen des ersten Chromosoms
+	\item Balancer-Chromosomen unterdr\"ucken Rekombinationsereignisse zwischen ihnen und dem homologen Chromosom
+\end{enumerate}
+
+
+	\choice{a und b sind richtig}
+
+	\choice{b und c sind richtig}
+
+	\choice{c und e sind richtig}
+
+	\choice[!]{d und e sind richtig}
+
+	\choice{alle Antworten sind richtig}
+
+\end{question}
+
+\vspace{1cm}
+
+\begin{question}
+
+	Welche Aussagen \"uber Mutationen sind richtig?
+
+	\begin{enumerate}[(a)]
+		\item Um zu ermitteln, ob sich eine Mutation dominant oder rezessiv verh\"ahlt, f\"uhrt man einen Komplmentationstest durch
+    \item Damit eine dominante Mutation ausgepr\"agt wird, reicht das Vorhandensein einer Kopie im Genom aus
+    \item Rezessive Mutationen pr\"agen sich nur in Homozygose aus
+    \item Das wildtypische Allel eines Gens verh\"alt sich gegen\"uber jedem mutanten Allel dominant
+    \item Balancer-Chromosomen tragen immer eine Kombination von rezessiven und dominanten Mutationen
+	\end{enumerate}
+
+
+
+	\choice[!]{b, c und e sind richtig}
+	\choice{a, b und c sind richtig}
+	\choice{b, c und d sind richtig}
+	\choice{c, d und e sind richtig}
+	\choice{alle Antworten sind richtig}
+
+\end{question}
+\vspace{1cm}
+
+\begin{question}
+
+	Welche Aussagen \"uber die Regulation eukaryotischer Gene sind richtig?
+
+	\begin{enumerate}[(a)]
+    \item Enhancer sind DNA-bindende Proteine, die die Expression von Genen in zeitlicher und r\"aumlicher Hinsicht kontrollieren
+  	\item Jedes Gen besitzt f\"ur die Regulation seiner Expression nur einen Enhancer
+  	\item Enhacer k\"onnen vor, in oder hinter der Transkriptionseinheit eines Gens lokalisiert sein
+  	\item Enhancer sind DNA-Abschnitte, an die spezielle Proteine sequenzspezifisch binden k\"onnen
+  	\item Enhacer agieren Gen-spezifisch, das hei\ss{}t sie beeinflussen ausschliesslich die Expression ihres Gens
+  \end{enumerate}
+
+
+
+	\choice{d und e sind richtig}
+	\choice{a und c sind richtig}
+	\choice[!]{c und d sind richtig}
+	\choice{b und c sind richtig}
+	\choice{c und e sind richtig}
+
+\end{question}
+
+\vspace{1cm}
+\begin{question}
+
+	 Welche Komponenten sind Bestandteil eines wildtypischen \emph{Drosophila} P-Elements?
+
+	\begin{enumerate}[(a)]
+    \item Origin of replication
+  	\item Antibiotika-Gesistenzgen
+  	\item lacZ-Gen
+  	\item Terminale inverted repeats
+  	\item Polylinker
+  	\item Transposase-Gen
+  \end{enumerate}
+
+
+
+	\choice{a und f sind richtig}
+	\choice{b und d sind richtig}
+	\choice[!]{d und f sind richtig}
+	\choice{c und e sind richtig}
+	\choice{e und f sind richtig}
+
+\end{question}
+\vspace{1cm}
+\begin{question}
+
+	 Welche Aussagen \"uber P-Elemente bei \emph{Drosophila melanogaster} sind richtig?
+
+	\begin{enumerate}[(a)]
+    \item F\"ur die Durchf\"uhrung einer Inversen PCR muss das P-Element einen origin of replication enthalten
+  	\item P-Elemente k\"onnen ebenso wie R\"ontgenstrahlen und chemischen Mutagenen zur Erzeugung von Mutationen genutzt werden
+  	\item F\"ur die Enhacer trap Technik verwendete P-Elemente enthalten kein Transposase-Gen
+  	\item Ziel der Plasmid rescue Methode ist es, P-Element-Sequenzen aus dem Genom zu isolieren
+  	\item Bei der Enhacer trap Technik wandelt Ampicillin das fablose Substrat X-Gal in ein farbiges Produkt um
+  	\item Transposase-Gen
+  \end{enumerate}
+
+
+
+	\choice{b und d sind richtig}
+	\choice[!]{b und c sind richtig}
+	\choice{a und d sind richtig}
+	\choice{a und e sind richtig}
+	\choice{c und e sind richtig}
+
+\end{question}
+
+\vspace{1cm}
+\begin{question}
+
+	 Welche Aussagen \"uber Synzytien sind richtig?
+
+	\begin{enumerate}[(a)]
+    \item Synzytien findet man nur bei \emph{Drosophila melanogaster}
+  	\item Das Synzytium entsteht bei \emph{Drosophila melanogaster} durch Kernteilungen ohne anschliessende Cytokines
+  	\item Ein Synzytium besteht aus vielen Zellen mit jeweils einem Kern
+  	\item Bei \emph{Drosophila melanogaster} stellen Synzytien ein fr\"uhes Stadium der Embryogenese dar
+  	\item Das Synzytium entsteht bei \emph{Drosophila melanogaster} durch Verschmelzung von zahlreichen Einzelzellen
+  	\item Am Ende des sog. Synzytialen Balstoderms besteht der \emph{Drosophila}-Embryo aus ca. 1000 Kernen
+  \end{enumerate}
+
+
+
+	\choice{a und b sind richtig}
+	\choice[!]{b und d sind richtig}
+	\choice{d und e sind richtig}
+	\choice{c und f sind richtig}
+	\choice{b und e sind richtig}
+
+\end{question}
+\vspace{1cm}
+\begin{question}
+
+	 Welche Aussagen \"uber Polzellen sind richtig?
+
+	\begin{enumerate}[(a)]
+    \item Die Bildung der Polzellen wird durch Morphogene induziert
+  	\item Polzellen sind die letzten Zellen, die bei der Embryonalentwicklung von \emph{Drosophila melanogaster} gebildet werden
+  	\item Polzellen entstehen am posterioren Pol des \emph{Drosophila melanogaster} Embryos
+  	\item Polzellen stellen bei \emph{Drosophila melanogaster} die Vorl\"aufer der Keimzellen dar
+  	\item Die Bildung von Polzellen ist von zytoplasmatischen Determinanten abh\"angig
+  	\item Aus Polzellen gehen bei \emph{Drosophila melanogaster} die somatischen Zellen der Gonaden hervo
+  \end{enumerate}
+
+
+
+	\choice{a, c und d sind richtig}
+	\choice{b, c und f sind richtig}
+	\choice[!]{c, d und e sind richtig}
+	\choice{b, d und e sind richtig}
+	\choice{c, e und f sind richtig}
+
+\end{question}
+\vspace{1cm}
+\begin{question}
+
+	 Welche Aussagen \"uber P-Elemente sind richtig?
+
+	\begin{enumerate}[(a)]
+    \item P-Elemente, in denen ein inverted repeat defekt ist, lassen sich nie mehr mobilisieren
+    \item P-Elemente sind bei \emph{Drosophila} die am h\"aufigsten f\"ur die Transgenese verwendeten Transposons
+    \item P-Elemente integrieren immer in die Promotorregion von Genen
+    \item Nat\"urliche, funktionale P-Elemente enthalten drei Gene, von denen eins f\"ur das Enzym Transposase kodiert
+    \item Nat\"urliche P-Elemente bestehen aus einem zirkul\"aren DNA-Molek\"ul
+    \item P-Elemente, in denen das Transposase-Gen defekt ist, lassen sich nie mehr mobilisieren
+    \item P-Elemente bestehen aus inverted repeasts und einem Transposase-Gen
+  \end{enumerate}
+
+
+
+	\choice[!]{a, b und g sind richtig}
+	\choice{b, c und d sind richtig}
+	\choice{a, b und d sind richtig}
+	\choice{b, f und g sind richtig}
+	\choice{e, f und g sind richtig}
+
+\end{question}
+\vspace{1cm}
+\begin{question}
+
+	 Welche Aussagen zur Transgenese bei \emph{Drosophila melanogaster} sind falsch?
+
+	\begin{enumerate}[(a)]
+    \item Vollst\"andige transgene Nachkommen erh\"alt man bei erfolgreicher Transgenese in der 1. Nachkommengeneration
+    \item Als Transposasequelle fungiert ein sog. Helferplasmid, welches das Transposasegen unter der Kontrolle eines dauerhaft aktiven Promotors tr\"agt
+    \item Zur Identifizierung transgener Nachkommen tr\"agt das Plasmid mit dem zu integrierenden Transgen zus\"atzlich ein Antibiotika-Resistenzgen
+    \item Als Empf\"anger f\"ur das zu integrierende Transgen fungiert ein wildtypischer \emph{Drosophila}-Stamm
+    \item Das zu integrierende Transgen muss von inverted repeats flankiert sein, um ins Fliegengenom springen zu k\"onnen
+  \end{enumerate}
+
+
+	\choice{a und b sind falsch}
+  \choice{b und c sind falsch}
+  \choice{d und e sind falsch}
+  \choice[!]{c und d sind falsch}
+  \choice{a und b sind falsch}
+
+\end{question}
+
+\vspace{1cm}
+\begin{question}
+
+	 Welche Aussagen \"uber die RNA-Interferenz (RNAi) sind richtig?
+
+	\begin{enumerate}[(a)]
+    \item Bei der RNAi wird das Zielgen reversibel inaktiviert
+    \item RNAi wirkt post-transkriptionell
+    \item RNAi gibt es nur bei \emph{Drosophila melanogaster}
+    \item Das Dicer-Protein entscheidet dar\"uber, welches Gen inaktiviert wird
+    \item Der RNA-induced silencing complex (RISC) spaltet l\"angere doppelstr\"angige RNA-Molek\"ule in k\"urzere doppelstr\"angige RNA-Molek\"ule von 20-30bp
+    \item RNAi ist ein nat\"urlicher Mechanismus zur Genregulation
+  \end{enumerate}
+
+	\choice[!]{a, b und f sind richtig}
+  \choice{a, c und e sind richtig}
+  \choice{b, c und d sind richtig}
+  \choice{b, d und e sind richtig}
+  \choice{d, e und f sind richtig}
+
+\end{question}
+\vspace{1cm}
+
+ \begin{question}
+   Welche Aussagen zum Thema Allele sind richtig?
+
+   \begin{enumerate}[(a)]
+     \item Jedes Gen kann in diversen Zustandsformen vorliegen
+     \item Als amorphes Allel bezeichnet man die Mutation in einem Gen immer dann, wenn von diesem kein Protein mehr gebildet werden kann
+     \item Bei einem hypomorphen Allel ist das von diesem kodierten Protein \"uberaktiv
+     \item Hypermorphe Allele kodieren f\"ur Proteine, die in ihrer Funktion eingeschr\"ankt sind
+     \item Entsteht druch eine Mutation ein neomorphes Allel, so f\"uhrt dies zu einem g\"anzlich neuen, mutatnten Ph\"anotyp
+     \item Allele lassen sich nur durch Sequenzierung als amorph oder hypomorph klassifizieren
+   \end{enumerate}
+
+   \choice{a, b und f sind richtig}
+   \choice{b, c und f sind richtig}
+   \choice{c, d und e sind richtig}
+   \choice{a, c und d sind richtig}
+   \choice[!]{a und e sind richtig}
+\end{question}
+
+\vspace{1cm}
+\begin{question}
+  Welche Aussagen \"uber Klone bei \emph{Drosophila melanogaster} sind richtig?
+
+  \begin{enumerate}[(a)]
+    \item Zur Erzeugung von Zellklonen in \emph{Drosophila} nutzt man das Ph\"anomen der mitotischen Rekombination
+    \item Um mutante Zellklone erzeugen zu k\"onnen, muss die Gr\"underzelle homozygot f\"ur die betrachtete Mutation sein
+    \item Das Rekombinationsereignis, welches zur Entstehung von Zellklonen f\"uhrt, findet in der G1-Phase des Zellzyklus statt
+    \item Mutante Klone lassen sich mithilfe von dominanten Markermutationen erkennen
+    \item Je sp\"ater in der Entwicklung die Kloninduktion erfolgt, desto zahlreicher werden die entstehenden Klone
+    \item Mithilfe von GFP-makierten Chromosomen k\"onnen bei der klonalen Analyse mutante Zellen von heterozygoten und wildtypischen Zellen unterschieden werden
+    \item Je sp\"ater in der Entwicklung die Kloninduktion erfolgt, desto gr\"osser werden die entstehenden Klone
+  \end{enumerate}
+
+  \choice[!]{a, e und f sind richtig}
+  \choice{b, e und g sind richtig}
+  \choice{a, c und e sind richtig}
+  \choice{b, d und f sind richtig}
+  \choice{e, f und g sind richtig}
+\end{question}
+
+\vspace{1cm}
+\begin{question}
+  Welche der nachfolgenden Methoden werden standardm\"assig verwendet, um die Lokalisation eines Gens auf einem Chromosom zu bestimmen?
+
+  \begin{enumerate}[(a)]
+    \item Reziproke Kreuzung
+    \item Komplementation mittels Defizienzen
+    \item meiotische Rekombination
+    \item RFLP's
+    \item Epistasietest
+    \item klonale Analyse
+  \end{enumerate}
+
+  \choice[!]{a, b und c sind richtig}
+  \choice{b, c und f sind richtig}
+  \choice{a, b und e sind richtig}
+  \choice{c, d und e sind richtig}
+  \choice{b, e und f sind richtig}
+\end{question}
+\vspace{1cm}
+\begin{question}
+  Welche der nachfolgenden Aussagen zur zytologischen Genkartierung sind richtig?
+
+  \begin{enumerate}[(a)]
+    \item Ein Centi-Morgan entspricht 10 \% Rekombination
+    \item Zur Kartierung einer Mutation auf ein bestimmtes Chromosom verwendet man dominante Markergene
+    \item Je weiter zwei Gene voneinander entfernt sind, desto seltener rekombinieren sie
+    \item F\"ur die zytologische Kartierung von Genen nutzt man bei \emph{Drosophila melanogaster} das Ph\"anomen der mitotischen Rekombination
+    \item Das Genom von \emph{Drosophila} ist zu rund 95\% durch Defizienzen abgedeckt
+    \item Crossing over-Ereignisse finden in der Prhophase der Meiose II statt
+  \end{enumerate}
+
+  \choice{a und b sind richtig}
+  \choice{b und c sind richtig}
+  \choice{d und e sind richtig}
+  \choice{e und f sind richtig}
+  \choice[!]{b und e sind richtig}
+\end{question}
+\vspace{1cm}
+\begin{question}
+  Welche der nachfolgenden Aussagen zur Genkartierung sind richtig?
+
+  \begin{enumerate}[(a)]
+    \item Bei der Verwendung von Phagen zum Chromosome walking macht man sich deren lysogenen Lebenszyklus zunutze
+    \item Von einem Phagen k\"onnen maximal 50kb an genomischer DNA aufgenommen werden
+    \item Die Chromosom-in situ Hybridisierung wird bei \emph{Drosophila} an mitotischen Metaphase-Chromosomen durchgef\"uhrt
+    \item Die Chromosomen-in situ Hybridisierung basiert auf der komplement\"aren Basenpaarung zwischen DNA und Sonde
+    \item Die Nachweismethode bei der Chromosomen-in situ Hybridisierung bezeichnet man als indirekt
+    \item cDNA's werden mithilfe des Enyms Transposase aus mRNA-Molek\"ulen generiert
+  \end{enumerate}
+
+  \choice[!]{d und e sind richtig}
+  \choice{d und f sind richtig}
+  \choice{a und d sind richtig}
+  \choice{a und b sind richtig}
+  \choice{c und d sind richtig}
+\end{question}
+
+\vspace{1cm}
+\begin{question}
+  Welche der nachfolgenden Aussagen zur Genkartierung sind richtig?
+
+  \begin{enumerate}[(a)]
+    \item Der bei der Chromosomen-in situ Hybridisierung identifizierte Bereich auf dem Chromosom enth\"alt nur das gesuchte Gen
+    \item cDNA's werden auf der Basis des Prim\"artranskriptes eines Gens hergestellt
+    \item Um mRNA's zu isolieren, macht man sich deren Cap-Struktur zunutze
+    \item RFLP's helfen bei der Identifizierung eines mutierten Gens, indem sie Unterschiede in den DNA-Sequenzen von Wildtypen und Mutanten aufdecken
+    \item Durch Sequenzierung der mRNA lassen sich Mutationen in Genen identifizieren
+    \item Ein Rettungsexperiment stelt den ultimativen Beweis daf\"ur dar, dass man das f\"ur eine Mutation verantwortliche Gen identifiziert hat
+  \end{enumerate}
+
+  \choice{d und e sind richtig}
+  \choice[!]{d und f sind richtig}
+  \choice{e und f sind richtig}
+  \choice{a und b sind richtig}
+  \choice{c und b sind richtig}
+\end{question}
+
+\vspace{1cm}
+\begin{question}
+  Welche der nachfolgenden Aussagen zur Genkartierung sind richtig?
+
+  \begin{enumerate}[(a)]
+    \item Der bei der Chromosomen-in situ Hybridisierung identifizierte Bereich auf dem Chromosom enth\"alt nur das gesuchte Gen
+    \item cDNA's werden auf der Basis des Prim\"artranskriptes eines Gens hergestellt
+    \item Um mRNA's zu isolieren, macht man sich deren Cap-Struktur zunutze
+    \item RFLP's helfen bei der Identifizierung eines mutierten Gens, indem sie Unterschiede in den DNA-Sequenzen von Wildtypen und Mutanten aufdecken
+    \item Durch Sequenzierung der mRNA lassen sich Mutationen in Genen identifizieren
+    \item Ein Rettungsexperiment stelt den ultimativen Beweis daf\"ur dar, dass man das f\"ur eine Mutation verantwortliche Gen identifiziert hat
+  \end{enumerate}
+
+  \choice{d und e sind richtig}
+  \choice[!]{d und f sind richtig}
+  \choice{e und f sind richtig}
+  \choice{a und b sind richtig}
+  \choice{c und b sind richtig}
+\end{question}
+
+\vspace{1cm}
+
+
+\begin{question}
+  Welche Aussagen \"uber RNA's in der Zelle sind richtig?
+
+  \begin{enumerate}[(a)]
+    \item Mit rund 90\% stellt die ribosomale RNA den Grossteil der RNA's in der Zelle
+    \item tRNA's lassen sich mithilfe von sog. oligo-dT-Agarose spezifisch anreichern
+    \item Bezogen auf die Gesamte-RNA einer Zelle liegt der mRNA-Anteil immer bei $>5\%$
+    \item miRNA's dienen der Genregulation
+    \item Bei Eukaryonten gibt es 5 verschiedene rRNA's, die an der Bildung der Ribosomen beteiligt sind
+    \item tRNA's besitzen eine Cap-Strucktur, die sie vor vorzeitigem Abbau sch\"utzt
+  \end{enumerate}
+
+  \choice{a und b sind richtig}
+  \choice{c und d sind richtig}
+  \choice[!]{a und d sind richtig}
+  \choice{d und e sind richtig}
+  \choice{b und f sind richtig}
+\end{question}
+\vspace{1cm}
+\begin{question}
+  Welche der nachfolgenden Aussagen sind richtig?
+
+  \begin{enumerate}[(a)]
+    \item Durch einen Enhancer trap lassen sich Aussagen \"uber die Verteilung des von einem Gen kodierten Proteins im Gewebe machen
+    \item Ein Northern blot liefert u.a. Informationen dar\"uber, ob von einem Gen alternative Spleisspordukte existieren
+    \item Ein Southern blot beschreibt den Transfer von DNA auf eine Membran
+    \item Durch in situ-Hybridisierung bestimmt man die Gr\"osse der Transkripte eines Gens
+    \item Durch in situ-Hybridisierung lassen sich Aussagen \"uber die Verteilung des von einem Gen kodierten Proteins im Gewebe machen
+  \end{enumerate}
+
+  \choice{a und b sind richtig}
+  \choice{b und d sind richtig}
+  \choice{d und e sind richtig}
+  \choice{c und e sind richtig}
+  \choice[!]{b und c sind richtig}
+\end{question}
+
+\vspace{1cm}
+\begin{question}
+  Welche der nachfolgenden Aussagen zu Antik\"orperf\"arbungen sind richtig?
+
+  \begin{enumerate}[(a)]
+    \item Ein Western blot erlaubt es, verschiedene Varianten eines Proteins zu identifizieren
+    \item Die verwendeten Anitk\"orper besitzen eine konstante und eine variable Region, wobei erstere dem Antik\"orper seine Spezifit\"at verleiht
+    \item Ein k\"orperfremdes Protein, welches nach Applikation die Produktion von Antik\"orpern hervorruft, nennt man Epitop
+    \item Diejenige Region eines Proteins, die ein Antik\"orper erkennt, bezeichnet man als Antigen
+    \item Wurde der Prim\"arantik\"orper in der Maus hergestellt, so kann ein geeigneter Sekund\"arantik\"orper beispielsweise in der Ziege hergestellt werden
+  \end{enumerate}
+
+  \choice{a und d sind richtig}
+  \choice{b und d sind richtig}
+  \choice{c und d sind richtig}
+  \choice{d und e sind richtig}
+  \choice[!]{a und e sind richtig}
+\end{question}
+\vspace{1cm}
+\begin{question}
+  Welche der nachfolgenden Aussagen zum Two-Hybrid-Screen sind falsch?
+
+  \begin{enumerate}[(a)]
+    \item Ein Two-Hybrid-Screen wird in Bakterien durchgef\"uhrt
+    \item Mithilfe eines Two-Hybrid-Screens lassen sich miteinander direkt interagierende Proteine identifizieren
+    \item Bei einem Two-Hybrid-Screen kommen Fusionsproteine zum Einsatz, die als K\"oder und Beute bezeichnet werden
+    \item Die funktionelle Grundlage des Two-Hybride-Screens stellt das Gal80-Protein dar
+    \item Der Nachweis einer erfolgreichen Interaktion wird beim Two-Hybrid-Screen durch Expression eines Reportergens angezeigt
+    \item Ein Two-Hybrid-Screen kann ausschliesslich dazu verwendet werden, um zwei Proteine gezielt auf eine Interaktion hin zu untersuchen
+  \end{enumerate}
+
+  \choice{a, d und e sind falsch}
+  \choice{b, d und f sind falsch}
+  \choice[!]{a, d und f sind falsch}
+  \choice{d, e und f sind falsch}
+  \choice{c, d und e sind falsch}
+\end{question}
+\vspace{1cm}
+
+\begin{question}
+  Welche der nachfolgenden Aussagen zur Charakterisierung der funktionellen Beziehung zwischen Genen sind richtig?
+
+  \begin{enumerate}[(a)]
+    \item Um zu pr\"ufen, ob zwei Gene Komponenten der selben Wirkkette darstellen, f\"uhrt man einen Komplemntationstest durch
+    \item Das \"uberdeckte Gen ist epistatisch zum \"uberdeckenden Gen
+    \item Polyph\"anie beschreibt die Tatsche, dass mehrere Gene an der Auspr\"agung eines Merkmals beteiligt sind
+    \item Polygenie und Pleiotropie beschreiben das selbe Ph\"anomen
+    \item Das Two-Hybrid-System ist ein eukaryotisches in vivo Testsystem, um direkt interagierende Proteine zu isolieren
+    \item Die Co-Immunopr\"azipitation ist ein in vitro Verfahren, um interagierende Proteine aus einem Proteingemisch zu isolieren
+  \end{enumerate}
+
+  \choice{a und c sind richtig}
+  \choice[!]{e und f sind richtig}
+  \choice{a und b sind richtig}
+  \choice{c und d sind richtig}
+  \choice{d und f sind richtig}
+\end{question}
+\vspace{1cm}
+\begin{question}
+  Welche der nachfolgenden Aussagen zur Achsenbildung/Segmentierung sind richtig?
+
+  \begin{enumerate}[(a)]
+    \item RNase-Injektion ans anteriore Ende des Eis der Grille Smittia f\"uhrt zu einer Verdopplung anteriorer Strukturen des Embryos
+    \item Die Festlegung der anterior/posterioren K\"orperachse wird durch insgesamt drei Gruppen von maternalen Genen gesteuert
+    \item Dass Zellen im Embryo Positionsinformationen erhalten, um sich ortsgerecht zu differenzieren, wurde erstmals aufgrund von klonalen Analysen postuliert
+    \item Die beteiligten maternalen Gengruppen beeinflussen sich gegenseitig
+    \item Als midblastula transition (MBT) bezeichnet man den Beginn der Expresison der zygotischen Gene
+    \item Die meisten an der Segmentierung beteiligten Gene bei \emph{Drosophila} kodieren f\"ur Transkriptionsfaktoren
+  \end{enumerate}
+
+  \choice{c, e und f sind richtig}
+  \choice{a, d und e sind richtig}
+  \choice{b, c und d sind richtig}
+  \choice[!]{b, e und f sind richtig}
+  \choice{a, d und f sind richtig}
+\end{question}
+
+\vspace{1cm}
+\begin{question}
+  Welche der nachfolgenden Aussagen \"uber das Segmentierungsgen bicoid sind falsch?
+
+  \begin{enumerate}[(a)]
+    \item hunchback ist ein Zielgen von Bicoid
+    \item Injiziert man bicoid-mRNA ans anteriore Ende eines Eis, so f\"uhrt dies zum Verlust anteriorer Strukturen
+    \item Bicoid ist das posteriore Koordinatengen
+    \item Bicoid hemmt die Translation der caudal-mRNA
+    \item Die Lokalisation der Bicoid-mRNA erforder das Oskar-Protein
+    \item Der Verlust von Bicoid f\"uhrt zur Verdopplung posteriorer Strukturen
+  \end{enumerate}
+
+  \choice{b, d und e sind falsch}
+  \choice{a, c und d sind falsch}
+  \choice{a, b und f sind falsch}
+  \choice[!]{b, c und e sind falsch}
+  \choice{c, e und f sind falsch}
+\end{question}
+\vspace{1cm}
+\begin{question}
+  Welche der nachfolgenden Aussagen zu Segmentierungsgenen bei \emph{Drosophila} sind falsch?
+
+  \begin{enumerate}[(a)]
+    \item Die Hierarchie der Segmentierungsgene wurde durch Komplmentationstest ermittelt
+    \item Als Morphogen bezeichnet man alle Gene, die an der Formgebung eines Organismus beteiligt sind
+    \item Hohe Hunchback-Konzentrationen reprimieren die Expresison von \emph{Kr\"uppel}
+    \item Paarregelgene werden in 14 Streifen exprimiert
+    \item footprint-Analysen werden durchgef\"uhrt, um zu ermitteln, wo auf der DNA Transkriptionsfaktoren binden
+    \item Das f\"ur die Genregulation zust\"andige CD1-Element im \emph{Kr\"uppel}-Promotor wurde durch lacZ-Reportergenkonstukte identifiziert
+  \end{enumerate}
+
+  \choice{b, d und e sind falsch}
+  \choice[!]{a, b und d sind falsch}
+  \choice{a, b und c sind falsch}
+  \choice{c, e und f sind falsch}
+  \choice{c, d und e sind falsch}
+\end{question}
+\vspace{1cm}
+\begin{question}
+  Welche der nachfolgenden Aussagen zu Segmentierungsgenen bei \emph{Drosophila} sind richtig?
+
+  \begin{enumerate}[(a)]
+    \item \emph{engrailed} ist ein sog. Selektorgen, welches in jedem Parasegment anterior exprimiert wird
+    \item \emph{engrailed} definiert je Segment das posteriore Kompartiment
+    \item Akron und Telson sind terminale Strukturen, an deren Bildung das Torpedo-Protein beteiligt ist
+    \item Parasegmente bestehen aus dem posterioren Anteil eines Segments und dem anterioren Anteil des darauffolgenden Segments
+    \item Alle Segmentpolarit\"atsgene kodieren f\"ur Transkriptionsfaktoren
+    \item Die Gap-Gene werden ausschliesslich von den Koordinatengenen reguliert
+  \end{enumerate}
+
+  \choice{b, d und e sind richtig}
+  \choice[!]{a, b und d sind richtig}
+  \choice{a, d und f sind richtig}
+  \choice{b, c und d sind richtig}
+  \choice{c, d und f sind richtig}
+\end{question}
+\vspace{1cm}
+
+\begin{question}
+  Welche Aussagen \"uber homeotische Gene sind richtig?
+
+  \begin{enumerate}[(a)]
+    \item Die homeotischen Gene ANT-C und BX-C werden bei \emph{Drosophila} zum Hox a-Genkomplex zusammengefasst
+    \item Die homeotischen Gene sind bei \emph{Drosophila melanogaster} so entlang der A/P Achse exprimiert, wie sie auch auf dem Chromosom angeordnet sind
+    \item Alle homeotischen Gene kodieren f\"ur Transkriptionsfaktoren
+    \item Die Homeodom\"ane ist eine Nukleotidsequenz, die f\"ur eine Homeobox kodiert
+    \item Bei der Maus sind homeotische Gene in vier Komplexen organisiert
+    \item Die Expresison der homeotischen Gene wird bei \emph{Drosophila melanogaster} von den Segmentpolarit\"atsgenen reguleirt
+  \end{enumerate}
+
+  \choice{b, c und d sind richtig}
+  \choice{a, b und c sind richtig}
+  \choice{a, d und f sind richtig}
+  \choice[!]{b, c und e sind richtig}
+  \choice{a, c und f sind richtig}
+\end{question}
+\vspace{1cm}
+
+\begin{question}
+  Welche Aussagen \"uber Mechanismen der Geschlechtsdetermination sind richtig?
+
+  \begin{enumerate}[(a)]
+    \item Bei \emph{Drosophila} entscheidet das Verh\"altnis der Geschlechtschromosomen zur Anzahl der Autosomens\"atze \"uber das Geschlecht
+    \item Das Enzym Aromatase spielt bei der temperaturabh\"angigen Geschlechtsdetermination eine Schl\"usselrolle
+    \item Die orstabh\"angige Geschlechtsdetermination wirkt bei vielen Reptillien
+    \item Wird das m\"annliche Geschlecht durch den Genotyp XO determiniert, so spricht man von der sog. Protenor-Form
+    \item M\"annchen stellen immer das heterogametische Geschlecht dar
+  \end{enumerate}
+
+  \choice{d und e sind richtig}
+  \choice{a und b sind richtig}
+  \choice{b und c sind richtig}
+  \choice[!]{b und d sind richtig}
+  \choice{a und e sind richtig}
+\end{question}
+\vspace{1cm}
+
+\begin{question}
+  Welche Aussagen \"uber die Geschlechtsdetermination beim Menschen sind falsch?
+
+  \begin{enumerate}[(a)]
+    \item Beim Menschen ist der Mann das heterogametische Geschlecht
+    \item Die Geschlechtsdetermination beim Menschen folgt der Lygaeus-Form
+    \item Die Geschlechtsdetermination erfolgt beim Menschen in zwei Schritten
+    \item Das sog. Turner-Syndrom tritt bei Menschen auf, die einen XXY-Karyotyp aufweisen
+    \item Menschen mit einem XO-Karyotyp sind weiblich
+    \item Beim Menschen entscheidet die Zahl der X-Chromosomen \"uber das Geschlecht
+  \end{enumerate}
+
+  \choice{c, d und e sind falsch}
+  \choice{a, b und c sind falsch}
+  \choice{d, e und f sind falsch}
+  \choice{b, d und f sind falsch}
+  \choice[!]{c, d und f sind falsch}
+\end{question}
+\vspace{1cm}
+\begin{question}
+  Welche Aussagen \"uber die sog. SRY-Gen sind richtig?
+
+  \begin{enumerate}[(a)]
+    \item Das SRY-Gen kodiert f\"ur ein als TDF bezeichnetes Protein
+    \item Unter dem Einfluss des TDF-Proteins entwickelt sich das Mark der Gonade zum Hoden
+    \item Das SRY-Gen kodiert f\"ur einen Transkriptionsfaktor mit Homeodom\"ane
+    \item Das TDF-Protein beeinflusst direkt die Auspr\"agung sekund\"arer Geschlechtsmerkmale
+    \item Das SRY-Gen ist auf dem langen Arm des Y-Chromosoms lokalisiert
+    \item Durch ein als illegales Crossover bezeichnetes Ereignis kann das SRY-Gen auf ein X-Chromosom translozieren
+  \end{enumerate}
+
+  \choice[!]{a, b und f sind richtig}
+  \choice{a, b und e sind richtig}
+  \choice{a, c und f sind richtig}
+  \choice{a, b und d sind richtig}
+  \choice{c, d und e sind richtig}
+\end{question}
+
+\vspace{1cm}
+\begin{question}
+  Welche der nachfolgenden Aussagen zur sekund\"aren Geschlechtsentwicklung bei S\"augern sind richtig?
+
+  \begin{enumerate}[(a)]
+    \item Fr\"uh in der Entwicklung besitzt der Embryo Anlagen f\"ur weibliche und m\"annliche Gonaden
+    \item In Anwesenheit des TDF-Proteins degeneriert der M\"ullersche Gang und der Wolffsche Gang wird zum Samenleiter
+    \item Die undifferenzierte Gonade geht aus dem Endoderm hervor
+    \item In Anwesenheit des TDF-Proteins degeneriert der Wolfsche Gang und der M\"ullersche Gang wird zum Samenleiter
+    \item Im Hoden produzieren die Sertoli-Zellen das AMH-Hormon und die Leydigschen Zellen Testosteron
+    \item In Anwesenheit des TDF-Proteins degeneriert der M\"ullersche Gang und der Wolfsche Gang wird zum Ovidukt
+  \end{enumerate}
+
+  \choice{a, e und f sind richtig}
+  \choice[!]{a, b und e sind richtig}
+  \choice{a, d und e sind richtig}
+  \choice{b, c und e sind richtig}
+  \choice{c, d und e sind richtig}
+\end{question}
+\vspace{1cm}
+\begin{question}
+  Welche der nachfolgenden Aussagen zur Geschlechtsdetermination bei \emph{Drosophila} sind richtig?
+
+  \begin{enumerate}[(a)]
+    \item Triploide Fliegen mit zwei X-Chromosomen und einem Y-Chromosomen sind Weibchen
+    \item Diploide Fliegen mit drei X-Chromosomen sind semiletal
+    \item Triploide Fliegen mit drei X-Chromosomen und einem Y-Chromosomen sind Weibchen
+    \item Diploide Fliegen mit einem X-Chromosomen und einem Y-Chromosomen sind steril
+    \item Diploide FLiegen mit zwei X-Chromosomen und zwei Y-Chromosomen sind M\"annchen
+    \item Triploide Fliegen mit einem X-Chromosomen und einem Y-Chromosomen sind Metam\"annchen
+  \end{enumerate}
+
+  \choice{a, b und f sind richtig}
+  \choice{c, d und e sind richtig}
+  \choice{a, e und f sind richtig}
+  \choice[!]{a, e und f sind richtig}
+  \choice{b, c und e sind richtig}
+\end{question}
+\vspace{1cm}
+\begin{question}
+  Welche der folgenden Aussagen zur Geschlechtsdetermination sind richtig?
+
+  \begin{enumerate}[(a)]
+    \item \emph{Drosophila} M\"annchen besitzen Y-Chromosomen, die geschlechtsbestimmende Faktoren sind
+    \item Die Gene \emph{Sex-lethal} und \emph{transformer} werden bei \emph{Drosophila} anhand eines alternativen Splei\ss{}vorgangs in Weibchen aktiviert
+    \item Die Gene \emph{Sex-lethal} und \emph{transformer} werden bei \emph{Drosophila} durch Temperaturunterschiede in Weibchen aktiviert
+    \item Das weibliche Geschlecht der Honigbiene wird anhand der Heterozygotie am \emph{complementary sex determiner} (csd) Gen bestimmt
+    \item Das m\"annliche Geschlecht der Honigbiene wird anhand der Heterozygotie am \emph{complementary sex determiner} (csd) Gen bestimmt
+    \item Das \emph{csd} Gen und die komplement\"are Geschlechtsbestimmung der Honigbiene sind aus einer Genduplikation hervorgegangen
+    \item Hormone spielen bei der Geschlechtsdetermination von \emph{Drosophila} eine Rolle
+    \item Das \emph{Drosophila} Gen \emph{transformer} ist ein Transkriptionsfaktor, der \"uber Splei\ss{}vorg\"ange die geschlechtsspezifische Aktivit\"at von untergeordneten Genen reguliert
+
+  \end{enumerate}
+
+  \choice[!]{b, d und f sind richtig}
+  \choice{c, e und g sind richtig}
+  \choice{a, b und d sind richtig}
+  \choice{c, d und h sind richtig}
+  \choice{a, c, f und h sind richtig}
+\end{question}
+
+\vspace{1cm}
+\begin{question}
+  Der Ph\"anotyp eines mutanten Allels in Heterozygose \"uber eine  geeignete Defizienz (Allel/Def.) ist st\"arker als der des mutanten Allels in Homozygose (Allel/Allel). Um welche Art von mutantem Allel handelt es sich?
+
+  \choice{amorph}
+  \choice[!]{hypomorph}
+  \choice{antimorph}
+  \choice{neomorph}
+  \choice{metamorph}
+\end{question}
+\vspace{1cm}
+\begin{question}
+  Wof\"ur werden in \emph{Drosophila melanogaster} sog. P-Elemente verwendet?
+
+\begin{enumerate}[(a)]
+  \item Transgenese
+  \item Mutagenese
+  \item Isolierung von dem P-Element benachbarter genomische DNA
+  \item Enhancer-Trap
+  \item RNA-Isolierung
+\end{enumerate}
+
+  \choice[!]{Antwort a bis d sind richtig}
+  \choice{Antwort b bis e sind richtig}
+  \choice{Antwort a, c, d und e sind richtig}
+  \choice{Antwort a, c und d sind richtig}
+  \choice{Alle Antworten sind richtig}
+\end{question}
+\vspace{1cm}
+\begin{question}
+  Welche Aussagen \"uber Balancer-Chromosomen bei \emph{Drosophila melanogaster} sind richtig?
+
+\begin{enumerate}[(a)]
+  \item Sie enthalten multiple Inversionen
+  \item Sie enthalten multiple Deletionen
+  \item Sie enthalten multiple Duplikationen
+  \item Sie werden zur Isolierung genomischer DNA verwendet
+  \item Sie enthalten dominante Markermutationen
+  \item Sie dienen dem Erhalt rezessiver Letalmutationen
+  \item Sie enthalten dominante Letalmutationen
+\end{enumerate}
+
+  \choice{Antwort c bis e sind richtig}
+  \choice{Antwort b, d und e sind richtig}
+  \choice{Antwort b, e und f sind richtig}
+  \choice[!]{Antwort a, e und f sind richtig}
+  \choice{Antwort a, f und g sind richtig}
+
+\end{question}
+
+\vspace{1cm}
+
+\begin{question}
+  In der nachfolgenden Tabelle wurde Geschlecht, Lebensf\"ahigkeit und Fertilit\"at von \emph{Drosophila melanogaster} Tieren der aufgef\"uhrten Genotypen protokoliert
+  \begin{tabular}{| c | c | c | c | c |}
+  \hline
+  \textbf{Nr.} & \textbf{Genotyp} & \textbf{Geschlecht} & \textbf{lebensf\"ahig} & \textbf{fertil} \\
+  \hline
+  1 & \textbf{2X, 1Y, 2A} & weiblich & ja & ja \\
+  \hline
+  2 & \textbf{1X, 1Y, 2A} & m\"annlich & ja & ja \\
+  \hline
+  3 & \textbf{2X, 3A} & Meta-M\"annlich & semi-letal & nein \\
+  \hline
+  4 & \textbf{1X, 2A} & m\"annlich & ja & nein \\
+  \hline
+  5 & \textbf{2X, 2A} & weiblich & ja & ja \\
+  \hline
+  6 & \textbf{3X, 2A} & Meta-Weiblich & ja & ja \\
+  \hline
+  7 & \textbf{X, 2Y, 2A} & m\"annlich & ja & nein \\
+  \hline
+  8 & \textbf{1X, 3A} & Intersex & ja & nein \\
+  \hline
+  \end{tabular}
+
+\vspace{1cm}
+
+  \choice{Zeilen 2, 3, 5 und 7 sind richtig}
+  \choice[!]{Zeilen 1, 2, 4 und 5 sind richtig}
+  \choice{Zeilen 1, 3, 4 und 8 sind richtig}
+  \choice{Zeilen 2, 4, 6 und 7 sind richtig}
+  \choice{Zeilen 2, 4, 5 und 8 sind richtig}
+
+\end{question}
+
+\vspace{1cm}
+
+\begin{question}
+  In der nachfolgenden Tabelle wurde verschiedene molekular- bzw. zellbiologischen Teckniken jeweils dasjenige Molek\"ul zugeordnet, welches mit der entsprechenden Technik nachgewiesen werden kann
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    \textbf{Nr.} & \textbf{Technik} & Protein & DNA & RNA \\
+    \hline
+    1& in situ Hybridisierung an Embryonen &&&+ \\
+    \hline
+    2 & Southern blot & & & + \\
+    \hline
+    3 & Northern blot & & + & \\
+    \hline
+    4 & Antik\"orperf\"arbung & + & & \\
+    \hline
+    5 & RFLP & & & + \\
+    \hline
+    6 & Western blot & + & & \\
+    \hline
+  \end{tabular}
+
+  \vspace{1cm}
+
+  \choice[!]{Zeilen 1, 4 und 6 sind richtig}
+  \choice{Zeilen 2, 4 und 6 sind richtig}
+  \choice{Zeilen 1, 4 und 5 sind richtig}
+  \choice{Zeilen 1, 3 und 6 sind richtig}
+  \choice{Zeilen 3, 4 und 6 sind richtig}
+
+\end{question}
+
+
+\vspace{1cm}
+
+\begin{question}
+  Welche Aussagen bez\"uglich der Segmentierungsgene bei \emph{Drosophila melanogaster} sind richtig?
+
+
+\begin{enumerate}[(a)]
+  \item \emph{nanos} ist ein maternales Gen
+  \item F\"ur die Auspr\"agung des Ph\"anotyps der Gap-Gene ist nur das Genom der Mutter entscheidend
+  \item Mutationen in Segmentpolarit\"atsgenen f\"uhren zum Verlust jedes zweiten Segments
+  \item Mutationen in Gap-Genen f\"uhren zum Verlust mehrerer zusammenh\"angender Segmente
+  \item Die Expression der Segmentpolarit\"atsgene fixiert die Parasegmentgrenzen
+  \item Die Expression der Paarregelgene wird von den maternalen und den Gap-Genen reguliert
+  \item Beim Ausfall von \emph{bicoid} kommt es zum Verlust von Acron und Telson
+\end{enumerate}
+
+  \choice{Antworten a, e und g sind richtig}
+  \choice{Antworten c, d und f sind richtig}
+  \choice{Antowrten a, c, e und f sind richtig}
+  \choice[!]{Antworten a, d, e und f sind richtig}
+  \choice{Antworten b, d und e sind richtig}
+
+\end{question}
+
+\vspace{1cm}
+
+\begin{question}
+  Welche der nachfolgenden Techniken werden bei der Identifizierung eines Gens bei \emph{Drosophila melanogaster} nicht eingesetzt?
+
+\begin{enumerate}
+  \item Chromosome walking
+  \item Antik\"orperf\"arbung
+  \item Rettungsexperiment
+  \item Komplementation mittels Defizienzen
+  \item RFLP-Analysen
+  \item Northern blot
+  \item Plasmid rescue
+  \item Chromosomen-in situ-Hybridisierung
+  \item Struktur-Funktionsanalyse
+\end{enumerate}
+
+  \choice{Antworten 4, 5 und 8 sind richtig}
+  \choice{Antworten 2 bis 5 sind richtig}
+  \choice{Antworten 1, 3, 4 und 5 sind richtig}
+  \choice{Antworten 1, 3 und 4 sind richtig}
+  \choice[!]{Antworten 2, 6 und 9 sind richtig}
+
+\end{question}
+
+\vspace{1cm}
+
+\begin{question}
+  Welche genetische Konstellation entspricht dem menschlichen Turner-Syndrom?
+
+  \choice{XXX}
+  \choice{XXXY}
+  \choice{XXY}
+  \choice[!]{XO}
+  \choice{YO}
+\end{question}
+
+\vspace{1cm}
+
+\begin{question}
+Sie wollen testen, ob es sich bei zwei Mutationen, die zu einem gleichen mutanten Ph\"anotyp f\"uhren, um Allele desselben Gens handelt. Welches Experiment f\"uhren Sie durch?
+
+  \choice{in situ-Hybridisierung}
+  \choice{Rettungsexperiment}
+  \choice[!]{Komplemntationstest}
+  \choice{Plasmid-rescue}
+  \choice{Southern blot}
+
+\end{question}
+\vspace{1cm}
+
+\begin{question}
+  Von einem VNTR Marker sind 21 verschiedene Allele bekannt. Wie viele verschiedene Klassen von Heterozygoten existieren
+
+
+  \choice{21}
+  \choice[!]{210}
+  \choice{231}
+  \choice{241}
+  \choice{2097152}
+
+\end{question}
+
+\vspace{1cm}
+
+\begin{question}
+  Die Frequenz einer rezessiven Form der X-gekoppelten Farbblindheit betr\"agt 3.5\% in den m\"annlichen Europ\"aern. Wie hoch ist die erwartete Frequenz von farbenblinden Frauen? Wie viele Frauen sind heterozyogote Tr\"ager?
+
+  \choice{$q^2 = 0.211\% ; 2pq=5.75\%$}
+  \choice{$q^2 = 0.112\% ; 2pq=7.5\%$}
+  \choice[!]{$q^2 = 0.123\% ; 2pq=6.75\%$}
+  \choice{$q^2 = 0.105\% ; 2pq=9.25\%$}
+  \choice{$q^2 = 0.175\% ; 2pq=6.75\%$}
+\end{question}
+
+\vspace{1cm}
+\begin{question}
+  Die Gene \emph{vestigial (vg)} und \emph{brown(bw)} wurden auf dem 2. Chromosom von \emph{Drosophila melanogaster} katiert. Die Ergebnisse der zytologischen Kartierung unter Verwendung von Defizienzen sind in der nachfolgenden Tabelle zusammengefasst
+\vspace{1cm}
+  \begin{tabular}{|c|c|c|c|}
+    \hline
+    Defizienz & Bruchpunkt & \emph{vg} & \emph{bw} \\
+    \hline
+    I & 49A1 - 51B2 & - & + \\
+    \hline
+    II & 58F1 - 59F1 & + & - \\
+    \hline
+    III & 49E3 - 52A2 & - & - \\
+    \hline
+    IV & 59E1 - 60E3 & + & - \\
+    \hline
+    V & 48F4 - 50C3 & - & + \\
+    \hline
+    VI & 59E5 - 60A1 & - & - \\
+    \hline
+  \end{tabular}
+  \vspace{1cm}
+
+  Welche Antwort stellt die auf dieser Basis genauestm\"ogliche zytologische Kartierung dar?
+
+  \choice[!]{ \emph{bw} = 49A1 - 49E2; \emph{vg} = 59E1 - 59E4}
+  \choice{ \emph{bw} = 49A1 - 50C3; \emph{vg} = 59E1 - 59E4}
+  \choice{ \emph{bw} = 49A1 - 50C3; \emph{vg} = 59E1 - 59F1}
+  \choice{ \emph{bw} = 48F4 - 49A1; \emph{vg} = 58F1 - 59E1}
+  \choice{ \emph{bw} = 50C3 - 51B2; \emph{vg} = 59F1 - 60E3}
+
+\end{question}
+
+\vspace{1cm}
+\begin{question}
+  Die chromosomen sind Tr\"ager genetischer Informationen. Welche der folgenden Aussagen ist richtig?
+
+  \choice{Chromosomen bestehen nur aus DNA}
+  \choice{Das Centromer organisiert die mitotische Spindel}
+  \choice{Das Centrosom stellt die Spindelansatzstelle auf dem Chromosom dar}
+  \choice[!]{Jedes Chromosom eines haploiden Organismus in der mitotischen Anaphase enth\"alt eine DNA-Doppelhelix}
+  \choice{Jedes Chromosom eines diploiden Organismus in der mitotischen Anaphase enth\"alt zwei DNA-Doppelhelices}
+
+\end{question}
+
+\vspace{1cm}
+
+\begin{question}
+  Welche der folgenden Aussagen ist richtig? Das Prinzip der genetischen Kopplung beschreibt...
+
+  \choice{die Tatschae, da\ss{} unterschiedliche Allele eines bestimmten Gens an derselben Position auf einem Chromosom liegen}
+  \choice{die Entdeckung, da\ss{} f\"ur einige Merkmale mehrere Gene verantwortlich sind (wie bei der Augenfarbe von Fliegen)}
+  \choice[!]{die Beobachtung, da\ss{} Gene zusammen vererbt werden, wenn sie auf demselben Chromosom liegen}
+  \choice{die Beobachtung, da\ss{} dunkel gef\"arbte Regionen auf Chromosomen keine Gene enthalten}
+  \choice{die Beobachtung, da\ss{} zwei Ph\"anotypen oft gemeinsam auftreten (wie etwa helle Haar- und Augenfarben)}
+\end{question}
+
+\vspace{1cm}
+
+\begin{question}
+  In \emph{Drosophila} sind die Gene \emph{scute (sc)}, \emph{sable (s)} und \emph{vermilion (v)} X-chromosomal gekoppelt. Rezessive Weibchen werden mit wildtypischen M\"annchen gekreuzt. Weibchen der F1-Generation waren wildtypisch, aber alle M\"annchen exprimierten den mutanten Ph\"anotyp. In der F2-Generation zeigte sich folgende ph\"anotypische Aufspaltung(1000 nachkommen):
+\vspace{1cm}
+  \begin{tabular}{l l}
+    wt & 280 \\
+    \emph{sc, s, v} & 314 \\
+
+    \emph{s, v} & 150 \\
+
+    \emph{sc} & 156 \\
+
+    \emph{sc, v} & 46 \\
+
+    \emph{s} & 30 \\
+
+    \emph{sc, s} & 10 \\
+
+    \emph{v} & 14 \\
+  \end{tabular}
+  \vspace{1cm}
+  Wie gro\ss{} ist der Abstand zwischen \emph{s} und \emph{v}?
+  \choice{8.5 cM}
+  \choice[!]{10 cM}
+  \choice{12 cM}
+  \choice{38.2 cM}
+  \choice{32.8 cM}
+\end{question}
+
+\vspace{1cm}
+
+\begin{question}
+  Ordnen Sie folgende Begriffe den korrekten Definitionen zu: \\
+  Begriffe: 1. Penetranz, 2. Centromer, 3. Aneuploidie, 4. Centriol, 5.Chiasma
+  \vspace{1cm}
+  \begin{tabular}{|l | c|}
+    \hline
+    \textbf{Definition} & \textbf{Begriff Nr.} \\
+    \hline
+    Abweichung von der normalen Chromosomenzahl ganzer Chromosomens\"atze & \\
+    \hline
+    Spindelansatzstelle am Chromosom & \\
+    \hline
+    \"Uberkreuzung von Chromatiden & \\
+    \hline
+    Organisationszentrum f\"ur die Spindel & \\
+    \hline
+    Manifestationsh\"aufigkeit eines bestimmten Genotyps & \\
+    \hline
+  \end{tabular}
+  \vspace{1cm}
+
+  Welche der folgenden L\"osungen ist richtig (Reihenfolge von oben nach unten)
+  \choice{1, 4, 3, 5, 2}
+  \choice{3, 4, 5, 2, 1}
+  \choice[!]{3, 2, 5, 4, 1}
+  \choice{3, 4, 2, 5, 1}
+  \choice{4, 5, 3, 1, 2}
+\end{question}
+
+\vspace{1cm}
+
+\begin{question}
+  Das Restriktionsenzym \emph{EcoR1} schneidet die Sequenz GAATTC. Wie oft finden Sie diese DNA-Sequenz sch\"atzungsweise im Arabidopsisgenom mit ca 1.2 x 10\^8 Basenpaaren?
+
+  \choice{300x}
+  \choice{3000x}
+  \choice[!]{30000x}
+  \choice{300000x}
+  \choice{3000000x}
+\end{question}
+
+\vspace{1cm}
+
+\begin{question}
+
+  Retinitis pigmentosa, eine Krankheit die zum Erblinden f\"uhrt, wird durch eine Mutation im Gen A oder im Gen B verursacht. Gen A und B werden unabh\"angig voneinander vererbt. Die folgenden Genotypen und Ph\"anotypen beschreiben den Erbgang, wobei $A^1$ und $B^1$ Allele der Gene A und B sind (A$^+$ und $B^+$ sind die jeweiligen Wildtypallele):
+\vspace{1cm}
+  \begin{tabular}{|c | c|}
+    \hline
+    \textbf{Geotyp} & \textbf{Ph\"anotyp} \\
+    \hline
+    $A^1/A^+$;$B^+/B^+$ & normalsichtig \\
+    \hline
+    $A^1/A^1$;$B^+/B^+$ & Retinitis pigmentosa \\
+    \hline
+    $A^+/A^+$;$B^1/B^+$ & Retinitis pigmentosa \\
+    \hline
+  \end{tabular}
+
+\vspace{1cm}
+  Welche der folgenden Aussagen ist richtig?
+  \choice{Alle $A^1$ ist dominant \"uber das Wildtypallel}
+  \choice[!]{Das Wildtypallel ist dominant \"uber das mutatnte Allel $A^1$}
+  \choice{Allel $A^1$ und das Wildtypallel sind kodoiminant}
+  \choice{Allel $B^1$ ist rezessiv \"uber den Wildtyp}
+  \choice{Das Wildtypallel ist dominant \"uber das mutatnte Allel $B^1$}
+\end{question}
+
+\end{multiplechoice}
+
+
+
+
+\end{document}
