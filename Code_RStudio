@@ -1,0 +1,17 @@
+library(RndTexExams)
+f.in = 'test.tex'
+f.out = 'RandomTest-'
+n.test = 10
+n.question = 52
+latex.dir.out = 'latexOut'
+pdf.dir.out = 'PdfOut'
+
+list.out <- rte.analyze.tex.file(f.in,
+                                 latex.dir.out = latex.dir.out,
+                                 pdf.dir.out = pdf.dir.out)
+
+out <- rte.build.rdn.test(list.in = list.out,
+                          f.out = f.out,
+                          n.test = n.test,
+                          n.question = n.question,
+                          latex.dir.out = latex.dir.out)
